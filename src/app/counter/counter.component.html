@@ -1,0 +1,21 @@
+<div class="counterContainer">
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <span>{{ counter }}</span>
+  <button (click)="reset()">reset</button>
+</div>
+
+<div class="counterStatus">
+  <p
+    [ngStyle]="{
+      color:
+        getCounterStatus() === 'positive'
+          ? 'green'
+          : getCounterStatus() === 'negative'
+          ? 'red'
+          : 'black'
+    }"
+  >
+    Counter Status: {{ getCounterStatus() }}
+  </p>
+</div>
